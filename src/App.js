@@ -1,4 +1,7 @@
 import React from 'react';
+
+import BlogTile from './components/BlogTile';
+
 import './App.css';
 
 class App extends React.Component {
@@ -12,10 +15,11 @@ class App extends React.Component {
   }
 
   postsList = this.state.posts.map( post => (
-    <div key={post.id}>
-      <h2>{post.title}</h2>
-      <p>{post.intro}</p>
-    </div>
+   <BlogTile 
+      key = {post.id} 
+      title = {post.title}
+      intro = {post.intro}
+    />
   ))
 
   render(){
